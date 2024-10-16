@@ -1,0 +1,194 @@
+.jo-contact {
+    overflow: hidden;
+
+    .top {
+        padding-top: 100px;
+        background: url(../img/contact-bg.jpg) no-repeat center center;
+        background-size: cover;
+
+        @include xl {
+            padding-top: 70px;
+        }
+
+        @include md {
+            padding: 70px 0;
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-42%);
+            width: 594px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            animation: scale 3s infinite linear;
+        }
+
+        &::after {
+            width: 510px;
+            height: 510px;
+            top: -7px;
+            transform: translateX(-40.8%);
+            // animation-delay: 0.5s;
+        }
+    }
+
+    &-form-wrapper {
+        border-radius: 20px;
+        background-color: var(--white);
+        padding: 2.083vw;
+        box-shadow: 0px 4px 70px rgba(255, 0, 0, 0.1);
+        margin-bottom: -225px;
+
+        @include lg {
+            padding: 30px;
+        }
+
+        @include md {
+            margin-bottom: 0;
+        }
+
+        @include xxs {
+            padding: 20px;
+        }
+
+        >.icon {
+            display: inline-block;
+            margin-bottom: 0.781vw;
+        }
+
+        .jo-section-title {
+            margin-bottom: 0.781vw;
+
+            @include xl {
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            margin-bottom: 1.563vw;
+
+            @include xl {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &-form {
+        >*:not(:last-child) {
+            margin-bottom: 1.458vw;
+
+            @include xl {
+                margin-bottom: 15px;
+            }
+        }
+
+        label {
+            display: block;
+            width: max-content;
+            max-width: 100%;
+            font-weight: 600;
+            color: var(--black);
+            font-size: clamp(13px, 0.833vw, 16px);
+            margin-bottom: 0.885vw;
+        }
+
+        input,
+        textarea {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            height: clamp(56px, 3.385vw, 65px);
+            width: 100%;
+            padding: 0 1.302vw;
+            font-size: clamp(13px, 0.833vw, 16px);
+            font-weight: 500;
+            color: var(--black);
+            border-radius: 10px;
+            background-color: rgb(245, 245, 245, 0.5);
+
+            @include xxs {
+                padding: 0 15px;
+                height: 45px;
+            }
+        }
+
+        textarea {
+            height: clamp(120px, 7.187vw, 138px);
+            padding: 0.781vw 1.302vw;
+
+            @include xl {
+                padding: 15px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .jo-btn {
+        font-size: clamp(13px, 0.833vw, 16px);
+    }
+
+    .bottom {
+        // min-height: 320px;
+        padding-bottom: 100px;
+        background-color: #FFF1F1;
+
+        @include xl {
+            padding-bottom: 70px;
+        }
+
+        @include sm {
+            padding-bottom: 50px;
+        }
+
+        .blank-space {
+            pointer-events: none;
+        }
+    }
+}
+
+@keyframes scale {
+    0% {
+        // transform: scale(1);
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+        // transform: scale(2);
+        scale: 1.1;
+        opacity: 0;
+    }
+}
+
+.jo-partners {
+    &-title {
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--black);
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 45px;
+    }
+
+    &-slider-pagination {
+        text-align: center;
+        margin-top: 55px;
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--ttRed);
+        }
+    }
+}

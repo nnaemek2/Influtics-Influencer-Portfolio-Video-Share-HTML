@@ -1,0 +1,159 @@
+.jo-intro-lives-wrapper {
+    background: url(../img/intro-live-bg.png) var(--black) no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.jo-intro {
+    overflow: hidden;
+    position: relative;
+    padding: 50px 0;
+
+    @include xl {
+        padding: 20px 0 50px;
+    }
+
+    &__txt {
+        color: var(--white);
+
+        .jo-section-title {
+            color: var(--white);
+            margin-bottom: 22px;
+        }
+
+        .jo-btn {
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 1px;
+                background-color: var(--black);
+                z-index: -1;
+                border-radius: 6px;
+                transition: 0.4s ease;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__descr {
+        margin-bottom: 33px;
+        font-size: clamp(13px, 0.833vw, 16px);
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 50px;
+
+        li {
+            position: relative;
+            padding-left: 35px;
+            list-style: none;
+            font-weight: 600;
+            font-size: clamp(13px, 0.833vw, 16px);
+
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 1px;
+                width: 20px;
+                height: 20px;
+                background: url(../img/checkmark-badge.svg) no-repeat center center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 34px;
+        position: relative;
+
+        @include xxs {
+            margin-left: 0;
+        }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 56px;
+            width: 114px;
+            aspect-ratio: 1/1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--white);
+            color: var(--ttRed);
+            border-radius: 99px;
+            font-size: 26px;
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: btn-shadow-anim 2.5s linear infinite forwards;
+
+
+            @include sm {
+                left: 26px;
+                width: 84px;
+            }
+
+            @include xxs {
+                left: 10px;
+                width: 70px;
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-color: var(--ttRed);
+                color: var(--white);
+            }
+        }
+
+        img {
+            max-width: none;
+            max-height: 34.371vw;
+            border-radius: 999px 0 0 999px;
+        }
+    }
+
+    &__vector {
+        position: absolute;
+        top: 27px;
+        left: -427px;
+        animation: spin 5.5s linear infinite forwards;
+
+        @include xxxl {
+            left: -497px;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes btn-shadow-anim {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}

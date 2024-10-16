@@ -1,0 +1,144 @@
+.jo-checkout-wrapper {
+    margin: 5.25vw 26.01vw;
+
+    @include lg {
+        margin: 5.25vw 20.01vw;
+    }
+
+    @include md {
+        margin: 60px 15px;
+    }
+}
+
+.jo-checkout-form {
+    background-color: rgba(255, 0, 0, 0.06);
+    border-radius: 20px;
+
+
+    .form-block {
+        padding: clamp(20px, 2.1vw, 40px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        .block-title {
+            font-weight: 600;
+            font-size: clamp(22px, 1.58vw, 30px);
+            margin-bottom: clamp(18px, 1.21vw, 23px);
+        }
+
+        p {
+            font-size: clamp(13px, 0.84vw, 16px);
+
+            a {
+                color: var(--ttRed);
+            }
+        }
+    }
+
+    input {
+        width: 100%;
+        height: clamp(50px, 4.2vw, 80px);
+        padding: clamp(15px, 1.58vw, 30px);
+        border-radius: 10px;
+        margin-bottom: clamp(15px, 1.05vw, 20px);
+    }
+
+}
+
+.jo-checkout-payment-methods {
+    label {
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: clamp(8px, 0.79vw, 15px);
+        margin-bottom: clamp(8px, 0.79vw, 15px);
+        font-weight: 600;
+
+        >span {
+
+            &::before,
+            &::after {
+                top: 16px;
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+.jo-checkout-note {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: clamp(15px, 1.58vw, 30px);
+    border: 1px solid transparent;
+    height: 212px;
+    margin-top: clamp(25px, 2.1vw, 40px);
+    vertical-align: top;
+    margin-bottom: clamp(30px, 2.36vw, 43px);
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+        outline: none;
+        border-color: var(--ttRed);
+    }
+}
+
+.jo-checkout-agreement-wrapper {
+    margin-bottom: clamp(20px, 2.1vw, 40px);
+
+    label {
+        padding-left: 30px;
+        position: relative;
+        display: inline-block;
+
+        .txt::before,
+        .txt::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 1px solid var(--ttGray2);
+            top: 4px;
+            left: 0;
+        }
+
+        .txt::after {
+            width: 10px;
+            top: 9px;
+            left: 5px;
+            border: none;
+            background-color: var(--ttRed);
+            opacity: 0;
+        }
+
+
+        input:checked~.txt::after {
+            opacity: 1;
+        }
+    }
+}
+
+.jo-checkout-total {
+    margin-bottom: clamp(10px, 0.95vw, 18px);
+
+    h4 {
+        font-weight: 600;
+        font-size: clamp(20px, 1.58vw, 30px);
+        margin-bottom: 0.53vw;
+    }
+
+    .number {
+        font-weight: 600;
+        font-size: clamp(24px, 2.1vw, 40px);
+    }
+}

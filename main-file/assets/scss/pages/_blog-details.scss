@@ -1,0 +1,273 @@
+.jo-blog-details {
+    &-img {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &-txt {
+        p {
+            font-size: 15px;
+            color: var(--ttGray2);
+        }
+
+        ul {
+            font-size: clamp(13px, 0.79vw, 15px);
+            color: var(--black);
+            font-weight: 500;
+            margin-bottom: clamp(30px, 1.58vw, 30px);
+            margin-top: clamp(20px, 1.58vw, 30px);
+
+            li {
+                position: relative;
+                padding-left: 26px;
+                margin-bottom: 15px;
+
+                &::before {
+                    content: "\f11f";
+                    font-family: flaticon_jio_-_influencer !important;
+                    font-style: normal;
+                    font-weight: normal !important;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: var(--ttRed);
+                    font-size: 14px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        blockquote {
+            background-color: rgba(255, 0, 0, 0.05);
+            padding: clamp(30px, 2.1vw, 40px) clamp(20px, 1.58vw, 30px);
+            padding-right: clamp(80px, 6.83vw, 130px);
+            border-left: 4px solid var(--ttRed);
+            font-size: 16px;
+            font-weight: 500;
+            font-style: italic;
+            position: relative;
+
+            @include xxs {
+                flex-wrap: wrap;
+            }
+
+            .quotation-icon {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+            }
+        }
+
+    }
+
+    &-inner-imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(15px, 1.58vw, 30px);
+        margin-bottom: 15px;
+
+        @include xxs {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 450/269;
+            border-radius: 15px;
+        }
+    }
+
+    &-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+        border: solid #D4DCFF;
+        border-width: 1px 0 1px 0;
+        padding: 20px 0;
+
+        .tags-wrapper,
+        .share {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            a {
+                height: 34px;
+                background-color: #F8F8F8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                padding: 0 16px;
+                color: var(--black);
+
+                &:hover {
+                    background-color: var(--ttRed);
+                    color: var(--white);
+                }
+            }
+        }
+
+        .share-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 18px;
+
+            a {
+                color: #445375;
+
+                &:hover {
+                    color: var(--ttRed);
+                }
+            }
+        }
+    }
+}
+
+.jo-blog-comments {
+    margin-top: clamp(30px, 3.15vw, 60px);
+
+    &-title {
+        font-weight: 600;
+        font-size: clamp(20px, 1.26vw, 24px);
+        margin-bottom: clamp(28px, 1.84vw, 35px);
+    }
+}
+
+.jo-blog-comment {
+    display: flex;
+    gap: 20px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #D4DCFF;
+        padding-bottom: clamp(25px, 2.1vw, 40px);
+        margin-bottom: clamp(25px, 2.1vw, 40px);
+    }
+
+    &-user-img {
+        flex-shrink: 0;
+
+        img {
+            width: clamp(56px, 5.04vw, 96px);
+            border-radius: 50%;
+        }
+    }
+
+    &-txt {
+        padding-top: clamp(20px, 1.31vw, 25px);
+
+        .heading {
+            margin-bottom: 12px;
+        }
+
+        .name {
+            font-weight: 500;
+            font-size: clamp(17px, 1.05vw, 20px);
+        }
+
+        .date {
+            color: #445375;
+            font-size: clamp(13px, 0.84vw, 16px);
+        }
+
+        .descr {
+            color: #445375;
+        }
+
+        .reply-btn {
+            border-radius: 999px;
+            background-color: rgba(255, 0, 0, 0.1);
+            height: 30px;
+            font-size: 14px;
+            padding: 0 16px;
+            color: var(--ttRed);
+
+            &:hover {
+                background-color: var(--ttRed);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.jo-blog-comment-form {
+    &-wrapper {
+        padding-top: clamp(30px, 3.15vw, 60px);
+        border-top: 1px solid rgba(255, 0, 0, 0.1);
+        margin-top: clamp(25px, 2.1vw, 40px);
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: clamp(21px, 1.26vw, 24px);
+        margin-bottom: clamp(25px, 2.1vw, 40px);
+    }
+
+    label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    input,
+    textarea {
+        height: clamp(55px, 2.94vw, 56px);
+        border: 1px solid rgba(255, 0, 0, 0.1);
+        border-radius: 4px;
+        width: 100%;
+        padding: 0 clamp(15px, 1.05vw, 20px);
+
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+            outline: none;
+        }
+    }
+
+    textarea {
+        padding: clamp(15px, 1.05vw, 20px);
+        height: 200px;
+        vertical-align: top;
+    }
+
+    button {
+        background-color: var(--ttRed);
+        height: clamp(45px, 2.94vw, 56px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 clamp(18px, 1.26vw, 24px);
+        border-radius: 6px;
+        gap: 8px;
+        color: var(--white);
+        margin-top: clamp(15px, 1.58vw, 30px);
+
+        i {
+            font-size: 22px;
+            padding-top: 3px;
+        }
+    }
+}

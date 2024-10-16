@@ -1,0 +1,78 @@
+.jo-video-shop-details {
+    padding-top: clamp(60px, 5.25vw, 100px);
+    padding-bottom: clamp(60px, 5.25vw, 100px);
+
+    &-video-cover {
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: clamp(17px, 1.21vw, 23px);
+
+        .jo-video-card__btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--white);
+            color: var(--ttRed);
+            width: clamp(50px, 3.68vw, 70px);
+            font-size: clamp(15px, 0.95vw, 18px);
+
+            &:hover {
+                color: var(--white);
+                background-color: var(--ttRed);
+            }
+        }
+    }
+
+    &-title {
+        font-weight: 600;
+        font-size: clamp(22px, 1.58vw, 30px);
+        margin-bottom: clamp(13px, 0.84vw, 16px);
+    }
+
+    &-descr {
+        color: var(--ttGray2);
+        font-size: clamp(13px, 0.79vw, 15px);
+    }
+
+    &-sidebar {
+        >* {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: clamp(15px, 0.95vw, 18px);
+        }
+    }
+
+    &-video-info {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: clamp(15px, 1.58vw, 30px);
+
+        @include xxxl {
+            padding: clamp(15px, 1.28vw, 30px);
+        }
+
+        &:last-child {
+            border: none;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .jo-btn {
+            width: 100%;
+            margin-top: clamp(10px, 1vw, 19px);
+
+            @include xxxl {
+                padding: 0 15px;
+            }
+
+            i {
+                font-size: 10px;
+            }
+        }
+    }
+}

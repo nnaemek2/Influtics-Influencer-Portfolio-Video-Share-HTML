@@ -1,0 +1,138 @@
+.jo-inner-pricing-plan {
+    background-color: var(--white);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+    padding: clamp(25px, 2.1vw, 40px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 16px;
+    background: url(../img/pricing-plan-bg.svg) rgba(0, 0, 0, 0.02) no-repeat;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: url(../img/pricing-plan-vector.svg) no-repeat center center;
+        background-size: 100% 100%;
+        width: 317px;
+        height: 268px;
+        top: 60%;
+        transform: translateY(-50%);
+        right: 0;
+        pointer-events: none;
+    }
+
+    .plan-icon {
+        width: clamp(60px, 3.68vw, 70px);
+        // width: 70px;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+
+        img {
+            max-width: clamp(35px, 2.63vw, 50px);
+        }
+    }
+
+    .heading {
+        padding-left: clamp(45px, 3.68vw, 70px);
+        padding-left: 80px;
+        border-bottom: 1px solid #D4DCFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: clamp(25px, 2.1vw, 40px);
+
+        .title {
+            font-weight: 700;
+            font-size: clamp(20px, 1.26vw, 24px);
+        }
+
+        .sub-title {
+            font-size: clamp(13px, 0.84vw, 16px);
+            font-weight: 300;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: clamp(24px, 1.58vw, 30px);
+        }
+    }
+
+    .plan-features {
+        padding: clamp(25px, 2.1vw, 40px) 0 clamp(15px, 1.58vw, 30px);
+
+        li {
+            position: relative;
+            padding: 0 24px;
+            font-weight: 600;
+            margin-bottom: clamp(9px, 0.63vw, 12px);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                width: 16px;
+                aspect-ratio: 1/1;
+            }
+
+            &::before {
+                left: 0;
+                background: url(../img/checkmark.svg) no-repeat center center;
+                background-size: cover;
+            }
+
+            &::after {
+                right: 0;
+                content: "\f121";
+                font-family: flaticon_jio_-_influencer !important;
+                font-style: normal;
+                font-weight: normal !important;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: #445375;
+            }
+        }
+    }
+
+    &-btn {
+        height: clamp(45px, 2.94vw, 56px);
+        background-color: var(--ttRed);
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-weight: 600;
+        gap: 10px;
+        font-size: clamp(13px, 0.84vw, 16px);
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--black);
+        }
+
+        i {
+            font-size: 14px;
+        }
+    }
+}

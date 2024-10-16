@@ -1,0 +1,202 @@
+// hero section
+.jo-banner {
+    background: url(../img/banner-2-bg.jpg) no-repeat center center;
+    background-size: cover;
+    // height: 950px;
+    padding: 8.125vw 0 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include xxl {
+        padding: 126px 0 0;
+    }
+
+    @include lg {
+        padding: 106px 0 0;
+    }
+
+    .vector {
+        position: absolute;
+        bottom: 115px;
+        right: 0;
+    }
+
+    &-container {
+        margin: 0 7.031vw;
+
+        @include xxl {
+            margin: 0 75px;
+        }
+
+        @include lg {
+            margin: 0 45px;
+        }
+
+        @include xxs {
+            margin: 0 15px;
+        }
+    }
+
+    &__txt {
+        position: relative;
+
+        .vector {
+            bottom: -65px;
+            right: 370px;
+        }
+    }
+
+    &__title {
+        margin-top: 25px;
+        font-size: clamp(34px, 5.73vw, 110px);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.05;
+        margin-bottom: 30px;
+
+        >span:first-child {
+            display: block;
+        }
+
+        span.styled {
+            position: relative;
+            z-index: 1;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                inset: 0;
+                top: -30px;
+                // bottom: auto;
+                z-index: -1;
+                background: url(../img/banner-txt-vector-1.svg) no-repeat center center;
+                background-size: 100% 100%;
+            }
+
+            &::after {
+                background-image: url(../img/banner-txt-vector-2.svg);
+                z-index: 1;
+                inset: -10px;
+                left: -8px;
+                top: -30px;
+            }
+        }
+    }
+
+    &__notifi {
+        background-color: var(--white);
+        border-radius: 999px;
+        padding: 5px 8px;
+        max-width: 160px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        position: relative;
+        font-size: 14px;
+        color: var(--ttGray2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+        >img {
+            width: 40px;
+            aspect-ratio: 1/1;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            transform: translateY(-40%);
+            border-radius: 999px;
+            box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+
+            img {
+                width: 30px;
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 20px;
+
+        >*:last-child {
+            background: none;
+
+            &:hover {
+                background: var(--tt-pink);
+            }
+
+            &::before {
+                border: 1px solid transparent;
+                background: linear-gradient(90deg, var(--tt-pink), var(--white)) border-box;
+                -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+            }
+
+        }
+    }
+
+    &__img {
+        @include md {
+            text-align: center;
+        }
+
+        >img {
+            max-width: 33.854vw;
+
+            @include md {
+                max-width: 60%;
+                margin: auto;
+            }
+        }
+
+        &::before,
+        &::after {
+            transform: translateX(-50%) !important;
+            pointer-events: none;
+        }
+
+        .jo-banner__notifi {
+            position: absolute;
+            top: 70%;
+            left: 0;
+            text-align: left;
+        }
+    }
+
+    &__followers {
+        // position: absolute;
+        background: url(../img/banner-follower-count.svg) no-repeat center center;
+        background-size: contain;
+        text-align: center;
+        font-size: 14px;
+        padding: 28px 32px;
+        position: absolute;
+        right: 0;
+        top: 30%;
+
+        @include xxs {
+            padding: 18px 22px;
+        }
+
+        .number {
+            font-weight: 700;
+            font-size: 26px;
+            color: var(--ttRed);
+            display: block;
+            margin-bottom: 0;
+            line-height: 1;
+
+            @include xxs {
+                font-size: 22px;
+            }
+        }
+    }
+}

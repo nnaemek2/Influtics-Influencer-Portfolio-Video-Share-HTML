@@ -1,0 +1,125 @@
+.jo-articles {
+    padding: 100px 0;
+
+    @include xl {
+        padding: 70px 0;
+    }
+
+    .jo-section-title {
+        margin-bottom: 30px;
+    }
+}
+
+.jo-article {
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+    border-radius: 16px;
+
+    @include lg {
+        padding: 18px;
+    }
+
+    &__img {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        position: relative;
+
+        img {
+            width: 100%;
+            aspect-ratio: 402/265;
+        }
+    }
+
+    .date {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        background-color: var(--white);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: clamp(11px, 0.729vw, 14px);
+        color: var(--black);
+        display: inline-block;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-align: center;
+
+        @include xl {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .number {
+            background: var(--ttRed);
+            display: block;
+            color: var(--white);
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        .txt {
+            padding: 2px 11px;
+            display: block;
+        }
+    }
+
+    &__infos {
+        display: flex;
+        align-items: center;
+        gap: 1.563vw;
+        font-size: clamp(12px, 0.729vw, 14px);
+        font-weight: 500;
+        margin-bottom: 0.625vw;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        line-height: 1;
+
+        i {
+            font-size: 18px;
+            color: var(--ttRed);
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: clamp(19px, 1.146vw, 22px);
+        margin-bottom: 1.302vw;
+        line-height: 1.4;
+
+        @include xl {
+            margin-bottom: 18px;
+        }
+
+        a {
+            color: var(--black);
+            display: inline-block;
+
+            &:hover {
+                color: var(--ttRed);
+            }
+        }
+    }
+
+    &__btn {
+        font-weight: 600;
+        color: var(--ttRed);
+        font-size: clamp(13px, 0.833vw, 16px);
+        display: inline-flex;
+
+        &:hover {
+            color: var(--black);
+        }
+
+        .icon {
+            font-size: 22px;
+            line-height: 0.7;
+            padding-top: 1px;
+            padding-left: 4px;
+        }
+    }
+}

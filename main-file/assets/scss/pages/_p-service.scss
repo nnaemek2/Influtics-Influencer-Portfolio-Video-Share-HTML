@@ -1,0 +1,118 @@
+.jo-inner-services {
+    padding: 5.208vw 0;
+
+    @include md {
+        padding: 50px 0;
+    }
+}
+
+.jo-inner-service {
+    background-color: #FFF1F1;
+    border: none;
+    border-radius: 20px;
+    padding: clamp(15px, 1.563vw, 30px);
+
+    .jo-article__img {
+        border-radius: 15px;
+
+        img {
+            aspect-ratio: 390/261;
+        }
+    }
+
+    .jo-article__info {
+        gap: 10px;
+
+        i {
+            font-size: clamp(17px, 1.042vw, 20px);
+        }
+    }
+
+    .jo-article__title {
+        font-size: clamp(17px, 1.042vw, 20px);
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+
+    &-descr {
+        color: var(--ttGray2);
+        font-size: clamp(18px, 1.146vw, 22px);
+    }
+
+    .jo-btn {
+        gap: 6px;
+        color: var(--tt-pink);
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: #FFF1F1;
+            position: absolute;
+            inset: 1px;
+            border-radius: 4px;
+            transition: 0.4s ease;
+        }
+
+        &:hover {
+            color: var(--white);
+
+            &::after {
+                opacity: 0;
+            }
+        }
+
+        .icon {
+            font-size: 10px;
+            padding-top: 4px;
+        }
+    }
+}
+
+// features
+.jo-inner-features {
+    background: url(../img/features-bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 5.208vw 0;
+
+    @include md {
+        padding: 50px 0;
+    }
+}
+
+.jo-inner-feature {
+    text-align: center;
+
+    .icon {
+        width: 6.25vw;
+        max-width: 100%;
+        padding-top: 0.625vw;
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        margin: auto;
+        margin-bottom: 1.563vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(45px, 3.125vw, 60px);
+        background: linear-gradient(180deg, var(--ttRed), var(--tt-gold));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include md {
+            width: 65px;
+        }
+
+        @include sm {
+            padding-top: 7px;
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: clamp(17px, 1.042vw, 20px);
+        color: var(--white);
+    }
+}

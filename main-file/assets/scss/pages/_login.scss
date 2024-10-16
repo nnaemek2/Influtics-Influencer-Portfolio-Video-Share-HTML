@@ -1,0 +1,102 @@
+.jo-login {
+    padding: 12.4vw 0 10.19vw 38.62vw;
+    background: url(../img/login-bg.jpg) no-repeat center center;
+    background-size: cover;
+
+
+    @include sm {
+        padding: 12.4vw 0 10.19vw 28.62vw;
+    }
+
+    @include xxs {
+        padding: 12.4vw 15px 10.19vw 15px;
+    }
+}
+
+.jo-auth-form-wrapper {
+    background-color: var(--white);
+    width: max-content;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: clamp(310px, 30.11vw, 573px);
+
+    @include sm {
+        max-width: clamp(290px, 60.11vw, 573px);
+    }
+
+    @include xxs {
+        max-width: clamp(290px, 100%, 100%);
+        width: 100%;
+    }
+
+    .heading {
+        background-color: var(--ttRed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(25px, 2.1vw, 40px);
+        color: var(--white);
+
+        .logo {
+            max-width: 40%;
+        }
+
+        h3 {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: clamp(18px, 1.58vw, 30px);
+        }
+    }
+
+    .bottom {
+        padding: clamp(25px, 2.1vw, 40px);
+    }
+
+    form {
+        input {
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            height: clamp(45px, 4.2vw, 80px);
+            padding: clamp(15px, 1.58vw, 30px);
+            border-radius: 10px;
+            margin-bottom: clamp(15px, 1.05vw, 20px);
+        }
+
+        .forget-password-btn {
+            color: var(--ttGray2);
+            font-size: clamp(13px, 0.84vw, 16px);
+            padding-top: clamp(7px, 0.53vw, 10px);
+            padding-bottom: clamp(15px, 1.16vw, 22px);
+
+            &:hover {
+                color: var(--ttRed);
+            }
+        }
+
+        .jo-btn {
+            width: 100%;
+            height: clamp(45px, 2.73vw, 52px);
+        }
+
+    }
+
+    p {
+        text-align: center;
+        margin-top: clamp(20px, 1.58vw, 30px);
+        font-size: clamp(13px, 0.84vw, 16px);
+
+        a {
+            color: var(--ttRed);
+
+            &:hover {
+                color: var(--black);
+            }
+        }
+    }
+}
+
+.jo-register {
+    padding-top: clamp(50px, 5.25vw, 100px);
+    padding-bottom: clamp(50px, 5.25vw, 100px);
+}

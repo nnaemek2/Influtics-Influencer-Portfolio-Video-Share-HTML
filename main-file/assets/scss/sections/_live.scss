@@ -1,0 +1,107 @@
+.jo-upcoming {
+    &-lives {
+        color: var(--white);
+        padding: 50px 0;
+
+        @include xl {
+            padding: 20px 0;
+        }
+
+        &__heading {
+            text-align: center;
+            border: solid rgba(255, 255, 255, 0.2);
+            border-width: 1px 0 1px 0;
+            color: var(--white);
+            padding: 40px 0 30px;
+            margin-bottom: 50px;
+
+            @include xl {
+                padding: 30px 0 20px;
+            }
+
+            .jo-section-title {
+                color: var(--white);
+            }
+        }
+    }
+
+    &-live {
+        display: flex;
+        align-items: center;
+        gap: 2.604vw;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 1.563vw;
+
+        @include xl {
+            gap: 30px;
+        }
+
+        @include lg {
+            align-items: flex-start;
+        }
+
+        @include md {
+            flex-direction: column;
+        }
+
+        @include sm {
+            padding: 15px;
+        }
+
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &__img {
+            border-radius: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            max-width: 26.458vw;
+
+            @include xl {
+                max-width: 478px;
+            }
+
+            @include lg {
+                max-width: 418px;
+            }
+        }
+
+        &__txt {
+            .platform-tag {
+                margin-bottom: 1.302vw;
+            }
+
+            .title {
+                font-weight: 700;
+                font-size: (20px, 1.25vw, 24px);
+            }
+
+            .date {
+                font-size: clamp(12px, 0.729vw, 14px);
+                font-weight: 500;
+                padding-bottom: 1.302vw;
+                display: inline-block;
+
+                @include xxs {
+                    padding-bottom: 15px;
+                }
+            }
+
+            .descr {
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                padding-top: 1.042vw;
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 1.667vw;
+                font-size: clamp(13px, 0.833vw, 16px);
+
+                @include xxs {
+                    padding-top: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.jo-reels {
+    padding: 50px 0;
+
+    @include md {
+        padding: 50px 0 0;
+    }
+
+    @include sm {
+        padding: 40px 0 0;
+    }
+
+    &-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+        gap: 8px;
+
+        @include xxs {
+            margin-bottom: 10px;
+        }
+
+        button {
+            flex-shrink: 0;
+            background-color: rgba(255, 0, 0, 0.1);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 99px;
+            color: var(--ttRed);
+            // font-size: 24px;
+            transition: 0.4s ease;
+
+            i {
+                padding-top: 2px;
+            }
+
+            &:hover {
+                color: var(--white);
+                background-color: var(--ttRed);
+            }
+        }
+    }
+}
+
+.jo-reels-container {
+    max-width: 1920px;
+    margin: auto;
+    padding: 0px 3.91vw;
+}
+
+.jo-reel {
+    .plyr {
+        @include md {
+            min-width: 0;
+        }
+    }
+
+    .plyr__poster {
+        background-color: transparent;
+    }
+
+    &-video {
+        margin-bottom: 16px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        video {
+            max-width: 100%;
+            height: 25.63vw;
+            max-height: 492px;
+            width: 100%;
+            object-fit: cover;
+            background: #ddd;
+            vertical-align: top;
+
+            @include sm {
+                height: 42.63vw;
+            }
+
+            @include xs {
+                height: 66.63vw;
+            }
+
+            @include xxs {
+                height: 138.73vw;
+            }
+        }
+    }
+
+    .link {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
+
+    &-title a {
+        font-weight: 700;
+        font-size: 1.042vw;
+        color: var(--black);
+
+        @include xl {
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: var(--tt-pink);
+        }
+    }
+
+    &-info {
+        color: var(--ttGray2);
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.platform-tag,
+.jo-reel .link {
+    background-color: var(--white);
+    padding: 10px 15px;
+    width: max-content;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black);
+
+    img {
+        width: 16px;
+    }
+}

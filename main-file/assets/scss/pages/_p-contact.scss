@@ -1,0 +1,131 @@
+.jo-contact-info {
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    padding: clamp(15px, 1.58vw, 30px);
+    border-radius: 16px;
+    text-align: center;
+
+    .icon {
+        border: 1px solid rgba(255, 0, 0, 0.1);
+        border-radius: 8px;
+        width: clamp(55px, 3.68vw, 70px);
+        aspect-ratio: 1/1;
+        margin: auto;
+        padding: 5px;
+        color: var(--ttRed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(25px, 1.84vw, 35px);
+        margin-bottom: clamp(10px, 0.84vw, 16px);
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: clamp(18px, 1.26vw, 24px);
+        margin-bottom: clamp(7px, 0.53vw, 10px);
+
+        a {
+            color: var(--black);
+
+            &:hover {
+                color: var(--ttRed);
+            }
+        }
+    }
+
+    .descr {
+        margin-bottom: 0;
+        color: #445375;
+        font-size: clamp(13px, 0.84vw, 16px);
+    }
+}
+
+.jo-inner-contact {
+    &-form-section {
+        background-color: rgba(255, 0, 0, 0.05);
+        padding-top: clamp(50px, 5.25vw, 100px);
+    }
+
+    &-form-wrapper {
+        background-color: var(--white);
+        padding: clamp(25px, 2.36vw, 45px);
+        border-radius: 16px;
+        margin-bottom: clamp(50px, 5.25vw, 100px);
+    }
+
+    &-from-left-title {
+        font-weight: 700;
+        font-size: clamp(25px, 2.1vw, 40px);
+        margin-bottom: clamp(33px, 3.05vw, 58px);
+    }
+
+    &-img {
+        background: url(../img/inner-contact-img-vector.svg) no-repeat top center;
+        background-size: contain;
+        padding-top: 25px;
+    }
+
+    &-form-title {
+        font-weight: 700;
+        font-size: clamp(24px, 1.58vw, 30px);
+    }
+
+    &-form {
+
+        input,
+        textarea,
+        .ss-main {
+            height: clamp(45px, 3.15vw, 60px);
+            border: 1px solid rgba(255, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            padding: 0 clamp(15px, 1.05vw, 20px);
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        textarea {
+            padding: clamp(15px, 1.05vw, 20px);
+            height: 150px;
+            vertical-align: top;
+            margin-bottom: clamp(15px, 1.58vw, 30px);
+        }
+
+        .submit-btn {
+            height: clamp(45px, 3.15vw, 60px);
+            background-color: var(--ttRed);
+            border-radius: 8px;
+            width: 100%;
+            color: var(--white);
+            font-weight: 600;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: var(--black);
+                color: var(--white);
+            }
+
+            i {
+                font-size: 12px;
+                padding-top: 3px;
+            }
+        }
+    }
+}
+
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+    background-color: var(--ttRed);
+}
+
+.ss-content .ss-list .ss-option:hover {
+    background-color: var(--ttRed);
+}

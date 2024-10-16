@@ -1,0 +1,74 @@
+/*!--------------------
+Template Name: Influtics - Social Influencer Portfolio & Video Sharing HTML Template
+Author: tempticspro
+Version: 1.0
+
+CSS INDEX
+=================== 
+01. CUSTOM PROPERTIES
+02. GLOBAL
+03. Components
+04. CSS Animation
+05. Header
+06. Hero
+07. Social Links
+08. Reels
+09. Services
+10. Intro
+11. Live
+12. Videos
+13. Contact
+14. Article
+15. Footer
+
+--- INNER PAGES
+
+16. About Page
+17. Service Page
+18. Service Details Page
+19. Videos Page
+20. Video Details Page
+21. Video Shop Page
+22. Video Shop Details Page
+23. Login Page
+24. Checkout Page
+25. Blogs Page
+26. Pricing Page
+27. Contact Page
+28. Blog Details Page
+
+*/
+
+@import "main/breakpoints";
+@import "main/variables";
+@import "main/global";
+@import "main/components";
+@import "main/anim";
+
+// sections
+@import "sections/header";
+@import "sections/hero";
+@import "sections/social-links";
+@import "sections/reels";
+@import "sections/service";
+@import "sections/intro";
+@import "sections/live";
+@import "sections/videos";
+@import "sections/contact";
+@import "sections/article";
+@import "sections/footer";
+
+// pages
+@import "pages/about";
+@import "pages/p-service";
+@import "pages/service-details";
+@import "pages/p-videos";
+@import "pages/video-details";
+@import "pages/video-shop";
+@import "pages/video-shop-details";
+@import "pages/login";
+@import "pages/checkout";
+@import "pages/p-blog";
+@import "pages/pricing";
+@import "pages/p-contact";
+@import "pages/blog-details";
